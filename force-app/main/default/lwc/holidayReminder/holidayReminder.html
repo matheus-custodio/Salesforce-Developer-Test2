@@ -1,0 +1,12 @@
+<template>
+        <lightning-card  variant="Narrow"  title="Holiday Reminder" icon-name="standard:service_appointment_capacity_usage">
+            <template if:true={holiday}>
+                <template if:true={isHoliday}>
+                    <p class="slds-p-horizontal_small">Enjoy your {holiday.Name} holiday!</p>
+                </template>
+                <template if:false={isHoliday}>
+                    <p class="slds-p-horizontal_small">The Next Holiday is {holiday.Name} and it will be on {holiday.Date__c} and we have {daysUntil} day's until it.</p>
+                </template>
+            </template>
+        </lightning-card>
+</template>
